@@ -1,6 +1,10 @@
 from odoo import models, fields, api, _
 from odoo.exceptions import UserError, ValidationError
 from datetime import timedelta
+
+PROPERTY_STATES = [("new","New"),("offer_received","Offer Received"),("offer_accepted","Offer Accepted"),("canceled","Canceled"),("sold","Sold")]
+
+
 class EstateProperty(models.Model):
     _name="estate.property"
     _description="Estate Property Test"
@@ -21,7 +25,7 @@ class EstateProperty(models.Model):
     garden_orientation = fields.Selection(string="Garden Orientation", selection=[("north","North"),("south","South"),("west","West"),("east","East")])
     active = fields.Boolean("Active", default=True)
     #state = fields.Selection(string="State", selection=[("new","New"),("offer_received","Offer Received"),("offer_accepted","Offer Accepted"),("canceled","Canceled"),("sold","Sold")], required=True, copy=False, default="new")
-    state = fields.Selection(string="State", selection=[("new","New"),("offer_received","Offer Received"),("offer_accepted","Offer Accepted"),("canceled","Canceled"),("sold","Sold")], required=True, copy=False, default="new")
+    state = fields.Selection(string="State", selection=PROPERTY_STATES, required=True, copy=False, default="new")
     #garden_orientation2 = fields.Selection(string="Garden Orientation2", selection=[("north","North"),("south","South"),("west","West"),("east","East")])
     description = fields.Text(string='Description')
     salesman_id = fields.Many2one("res.users",string="Salesman", default = lambda self: self.env.user)
