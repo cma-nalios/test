@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="estate_menu_root" name="Estate" web_icon="estate,static/description/icon.png">
+        <menuitem id="estate_first_level_menu" name="First level Menu">
+            <menuitem id="estate_model_menu_action" action="estate_property_action"/>
+            <menuitem id="second_estate_model_menu_action" action="estate_property_action"/>
+            <menuitem id="estate_second_level_menu" name="Second Level Menu">
+                <menuitem id="fourth" action="estate_property_action"/>
+            </menuitem>
+        </menuitem> 
+        <menuitem id="settings_estate_menu" name="Settings">
+            <menuitem name="Properties name" id="actiontest" action="estate_property_type_action"/>
+            <menuitem name="Properties tags" id="property_tag" action="estate_property_tag_action"/>
+        </menuitem>
+        <menuitem id="test_model_wizard_menu_action" sequence="10" name="Wizard" action="launch_the_wizard" />
+    </menuitem>
+</odoo> 
+

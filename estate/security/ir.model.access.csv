@@ -1,0 +1,13 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_test_model,access_test_model,model_estate_property,base.group_user,1,1,1,1
+access_test_model_two,access_test_model_two,model_estate_property_type,base.group_user,1,1,1,1
+access_test_model_three,access_test_model_three,model_estate_property_tag,base.group_user,1,1,1,1
+access_test_model_four,access_test_model_four,model_estate_property_offer,base.group_user,1,1,1,1
+access_test_model_five,access_test_model_five,model_estate_property,estate_group_manager,1,1,1,1
+access_test_model_six,access_test_model_six,model_estate_property_type,estate_group_manager,1,1,1,1
+access_test_model_seven,access_test_model_seven,model_estate_property_tag,estate_group_manager,1,1,1,1
+access_test_model_eight,access_test_model_eight,model_estate_property_offer,estate_group_manager,1,1,1,1
+access_test_model_nine,access_test_model_nine,model_estate_property,estate_group_user,1,1,1,0
+access_test_model_ten,access_test_model_ten,model_estate_property_type,estate_group_user,1,0,0,0
+access_test_model_eleven,access_test_model_eleven,model_estate_property_tag,estate_group_user,1,0,0,0
+access_test_model_twelve,access_test_model_twelve,model_estate_property_offer,estate_group_user,1,1,1,0
