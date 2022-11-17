@@ -94,12 +94,6 @@ class EstateProperty(models.Model):
                 raise UserError("You can not delete a property if it's state is new or false")
 
 
-    def testWizard(self):
-        for rec in self.env['estate.property'].browse(self.env.context.get('active_ids',[])):
-            print("++++++++++++++++++THE RECORD ", rec)
-            rec.write({'state' : 'sold'})
-
-
     
     #def _search_is_ongoing(self,operator,value):
      #   if operator not in ['=', '!=']:

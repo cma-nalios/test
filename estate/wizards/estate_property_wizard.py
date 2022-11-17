@@ -11,4 +11,9 @@ class EstatePropertyWizard(models.TransientModel):
 
     def testWizard(self):
         properties = self.env['estate.property'].search([])
-        return
+        for rec in properties:
+            rec.write({'state' : self.state})
+        if self.state=="sold":
+            return self.env.ref('estate.report_event_registration_badge').report_action(properties)
+        
+        
